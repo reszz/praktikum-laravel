@@ -10,4 +10,8 @@ class MahasiswaController extends Controller
 
         return "Ini adalah halaman mahasiswa";
     }
+
+    public function profile(){
+        return view("profile");
+    }
 }

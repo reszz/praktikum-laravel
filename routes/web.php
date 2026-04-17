@@ -21,3 +21,4 @@ Route::get('/produk/{slug?}', function($slug = 'semua-produk') {
 });
 
 Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
+Route::get('/profile', [MahasiswaController::class, 'profile']);
