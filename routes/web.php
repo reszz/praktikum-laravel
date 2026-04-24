@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\ProdukController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -15,10 +16,13 @@ Route::get('/halo', function (){
 Route::get('/user/{id}', function ($id){
     return "Profile User dengan ID: ". $id;
 });
-
+Route::get('/produk', [ProdukController::class, 'index']);
 Route::get('/produk/{slug?}', function($slug = 'semua-produk') {
     return "Menampilkan: ". $slug;
 });
 
 Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
 Route::get('/profile', [MahasiswaController::class, 'profile']);
+
+Route::get('/showproduk', [ProdukController::class, 'show']);
+Route::get('/viewproduk', [ProdukController::class, 'view']);
