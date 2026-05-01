@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Mahasiswa;
 class MahasiswaController extends Controller
 {
     public function index(){
-
-        return "Ini adalah halaman mahasiswa";
+        $data = Mahasiswa::all();
+        return view("mahasiswa.index", compact('data'));
     }
 
-    public function profile(){
-        return view("profile");
-    }
+    // public function profile(){
+    //     return view("profile");
+    // }
 }
