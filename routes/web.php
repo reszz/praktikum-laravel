@@ -26,3 +26,6 @@ Route::get('/profile', [MahasiswaController::class, 'profile']);
 
 Route::get('/showproduk', [ProdukController::class, 'show']);
 Route::get('/viewproduk', [ProdukController::class, 'view']);
+
+Route::get('/mahasiswa/create', [MahasiswaController::class, 'create']);
+Route::post('/mahasiswa/store', [MahasiswaController::class, 'store']);
