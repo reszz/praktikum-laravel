@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\ProdukController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MahasiswaController;
 
 
 Route::get('/', function () {
