@@ -4,10 +4,7 @@ use App\Http\Controllers\ProdukController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MahasiswaController;
 
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::redirect('/', '/mahasiswa');
 
 Route::get('/halo', function (){
     return 'Halo, Salira Selamat Datang di Praktikum Laravel';
@@ -26,3 +23,12 @@ Route::get('/profile', [MahasiswaController::class, 'profile']);
 
 Route::get('/showproduk', [ProdukController::class, 'show']);
 Route::get('/viewproduk', [ProdukController::class, 'view']);
+
+Route::get('/mahasiswa/create', [MahasiswaController::class, 'create']);
+Route::post('/mahasiswa/store', [MahasiswaController::class, 'store']);
+
+Route::get('/mahasiswa/edit/{id}', [MahasiswaController::class, 'edit']);
+Route::post('/mahasiswa/update/{id}', [MahasiswaController::class, 'update']);
+
+Route::get('/mahasiswa/delete/{id}', [MahasiswaController::class, 'delete']);
+

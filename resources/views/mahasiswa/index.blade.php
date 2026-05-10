@@ -24,6 +24,10 @@
                 <td>{{ $item->nama }}</td>
                 <td>{{ $item->nim }}</td>
                 <td>{{ $item->jurusan }}</td>
+                <td>
+                    <a href="/mahasiswa/edit/{{ $item->id }}">Edit</a>
+                    <a href="/mahasiswa/delete/{{ $item->id }}" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</a>
+                </td>
             </tr>
             @endforeach
         </tbody>
