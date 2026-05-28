@@ -6,16 +6,16 @@ use App\Http\Controllers\MahasiswaController;
 
 Route::redirect('/', '/mahasiswa');
 
-Route::get('/halo', function (){
+Route::get('/halo', function () {
     return 'Halo, Salira Selamat Datang di Praktikum Laravel';
 });
 
-Route::get('/user/{id}', function ($id){
-    return "Profile User dengan ID: ". $id;
+Route::get('/user/{id}', function ($id) {
+    return "Profile User dengan ID: " . $id;
 });
 Route::get('/produk', [ProdukController::class, 'index']);
-Route::get('/produk/{slug?}', function($slug = 'semua-produk') {
-    return "Menampilkan: ". $slug;
+Route::get('/produk/{slug?}', function ($slug = 'semua-produk') {
+    return "Menampilkan: " . $slug;
 });
 
 Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
@@ -30,5 +30,4 @@ Route::post('/mahasiswa/store', [MahasiswaController::class, 'store']);
 Route::get('/mahasiswa/edit/{id}', [MahasiswaController::class, 'edit']);
 Route::post('/mahasiswa/update/{id}', [MahasiswaController::class, 'update']);
 
-Route::get('/mahasiswa/delete/{id}', [MahasiswaController::class, 'delete']);
-
+Route::post('/mahasiswa/delete/{id}', [MahasiswaController::class, 'delete']);

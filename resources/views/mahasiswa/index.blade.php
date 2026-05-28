@@ -26,7 +26,10 @@
                 <td>{{ $item->jurusan }}</td>
                 <td>
                     <a href="/mahasiswa/edit/{{ $item->id }}">Edit</a>
-                    <a href="/mahasiswa/delete/{{ $item->id }}" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</a>
+                    <form action="/mahasiswa/delete/{{ $item->id }}" method="POST" style="display:inline;">
+                        @csrf
+                        <button type="submit" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</button>
+                    </form>
                 </td>
             </tr>
             @endforeach
