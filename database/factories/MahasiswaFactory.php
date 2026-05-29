@@ -20,7 +20,7 @@ class MahasiswaFactory extends Factory
         return [
             'nama' => $this->faker->name(), // Menghasilkan nama acak
             'nim' => $this->faker->unique()->numerify('########'), // Menghasilkan 8 digit angka
-            'jurusan' => $this->faker->randomElement(['IF', 'SI', 'TI']), // Memilih acak dari pilihan
+            'jurusan' => $this->faker->randomElement(['Teknik Informatika', 'Sistem Informasi']), // Memilih acak dari pilihan
             'created_at' => now(),
             'updated_at' => now(),
         ];
